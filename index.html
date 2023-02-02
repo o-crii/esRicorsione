@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Boh</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		function powerFor(a, b){
+
+			let risultato=1
+
+			for(let i=0; i<b; i++){
+
+				risultato=risultato*a //la potenza di un numero utilizzando il ciclo for
+				
+			}
+
+			return risultato
+		}
+
+		function powerRecorsione(a, b){ //a,b sono i casi base ossia i numeri
+
+			if (b===0) {
+
+				return 1
+
+			} else {
+
+				return a*powerRecorsione(a, b-1)
+			}
+
+		}
+
+		function somma100For(n){
+
+			let risultato
+
+			for (var i = 0; i < n+1; i++) { //somma dei numeri da 0 a 100 con ciclo for
+
+				risultato=risultato+i
+			}
+
+			return risultato
+		}
+
+		function somma100Ricorsione(n){ //n è l'argomento 
+
+			let numero
+
+			if (n===0) {
+
+				return n
+
+			} else {
+				return n+somma100Ricorsione(n-1)
+			}
+		}
+
+		let l=[4, 8, 3, 5]
+
+		function sommaFor(l){
+			let risultato=0
+
+			for (let i = 0; i < l.length; i++) {
+
+				risultato=risultato*l[i]
+			}
+			return risultato
+		}
+
+		function sommaRicorsione(l) {
+			if (l.length===1) {
+
+				return l[0]
+
+			} else {
+
+				let last = l.pop() //pop prende l'ultimo argomento di una lista, lo toglie da essa, e lo memorizza in una variabile, nel nostro caso last
+
+				return last+sommaRicorsione(l)
+			}
+		}
+
+		function mininterativo(l){
+			let min= l[0]
+			for (let i = 1; i<l.length; i++) {
+
+				if (l[i] < min) {
+
+					min = l[i]
+
+				}
+			}
+			return min 
+		}
+
+	</script>
+
+</body>
+</html>
